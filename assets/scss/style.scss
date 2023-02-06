@@ -1,0 +1,215 @@
+@import "libs/colors";
+@import "libs/fontello";
+@import "libs/header";
+@import "libs/footer";
+
+@font-face {
+    font-family: "Cabin";
+    src: url('../fonts/Cabin-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "NanumGothic";
+    src: url('../fonts/NanumGothic-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    font-weight: 400;
+    text-decoration: none;
+    font-family: $font-cabin;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+body {
+    position: relative;
+    height: 100%;
+    color: $primary-text;
+
+}
+
+html {
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+}
+
+ul li,
+ol li {
+    margin: 0;
+}
+
+.header-container {
+    z-index: 4;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+
+    @media (min-width: 768px) {
+        padding: 0;
+        width: 648px;
+    }
+
+    @media (min-width: 1024px) {
+        width: 864px;
+    }
+
+    @media (min-width: 1200px) {
+        width: 1080px;
+    }
+
+    @media (min-width: 1400px) {
+        width: 1240px;
+    }
+
+    @media (min-width: 1600px) {
+        width: 1440px;
+    }
+}
+
+#payment-form{
+    padding: 25px 15px;
+    background-color: rgba(158,221,251,.26);
+    border-radius: 5px;
+    max-width: 335px;
+}
+
+#payment-form #submit {
+    display: flex;
+    width: 100%;
+    max-width: 305px;
+    margin-top: 20px;
+    padding: 6px 15px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #e33569;
+    justify-content: center;
+}
+
+.popup {
+    display: none;
+
+    .overlay {
+      background: $overlay;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    .popup-content {
+      width: 90vw;
+      border-radius: 13px;
+      border: 2px solid $sky-blue;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 700px;
+      background: $white;
+      z-index: 11;
+
+      .popup-heading {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 20px;
+        text-align: center;
+        font-family: $font-nanum;
+        padding: 39px 45px;
+        border-bottom: 2px solid $sky-blue;
+        border-radius: 13px;
+        margin: 0;
+      }
+
+      .content {
+        padding: 30px 25px 42px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19px;
+          text-align: center;
+          width: 100%;
+        }
+
+        .cancel, .popup-button {
+          text-align: center;
+          padding: 10px 15px;
+          background-color: $red;
+          color: $white;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 20px;
+          font-family: $font-nanum;
+          width: 100%;
+          border: none;
+          margin: 40px 0 30px;
+          border-radius: 5px;
+          cursor: pointer;
+          max-width: 195px;
+        }
+
+        .popup-button{
+            margin: 0 auto;
+        }
+
+        a {
+          display: inline-block;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 16px;
+          text-decoration: underline;
+          font-family: $font-nanum;
+          color: $red;
+
+          &:nth-child(2) {
+            margin-top: 35px;
+          }
+        }
+      }
+    }
+}
+
+.popup.open{
+    display: block;
+}
+
+.remodal-bg{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+}

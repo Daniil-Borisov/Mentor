@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your DevOps Mentor</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="checkout.min.css" />
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <include src="assets/templates/header.html"></include>
+  <!-- Content -->
+
+  <main class="main">
+    <!-- end popups -->
+
+    <form id="payment-form">
+      <div id="payment-element">
+        <!--Stripe.js injects the Payment Element-->
+      </div>
+      <button id="submit">
+        <div class="spinner hidden" id="spinner"></div>
+        <span id="button-text">Pay now</span>
+      </button>
+      <div id="payment-message" class="hidden"></div>
+    </form>
+  </main>
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <script src="./js/checkout.min.js" defer></script>
+  <script src="./js/script.min.js"></script>
+</body>
+
+</html>

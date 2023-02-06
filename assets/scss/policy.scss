@@ -1,0 +1,56 @@
+@import "libs/colors";
+
+main {
+  background: $bg-gradient;
+  padding: 25px 20px;
+
+  section {
+    background: $white;
+    border-radius: 13px;
+    padding: 25px 25px 0 13px;
+    max-height: 70vh;
+    overflow: auto;
+
+    .breadcrumbs {
+      margin-bottom: 45px;
+      color: $dark-grey;
+      display: flex;
+      align-items: center;
+
+      a {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        color: inherit;
+      }
+
+      img {
+        margin: 0 15px;
+        transform: rotate(180deg);
+        width: 10px;
+        height: 7px;
+      }
+    }
+
+    .title {
+      margin-bottom: 20px;
+
+      h1 {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 25px;
+        font-family: $font-nanum;
+      }
+    }
+
+    .text {
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $dark;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

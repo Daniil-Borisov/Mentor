@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your DevOps Mentor</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="./css/login-mentor.min.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <include src="assets/templates/header.html"></include>
+  <!-- Content -->
+  <main>
+    <div class="content-items">
+      <div class="item form">
+        <h1>Log In Mentor </h1>
+        <p>You are mentee? <a href="javascript:void(0)">Click here</a></p>
+        <form action="">
+          <label for="username">
+            <h3>Username or E-mail</h3>
+            <div class="input-wrapper">
+              <input type="text" placeholder="Username" id="username">
+            </div>
+          </label>
+          <label for="password">
+            <h3>Password</h3>
+            <div class="input-wrapper">
+              <input type="password" placeholder="Password" id="password">
+              <button type="button" class="show-password">
+                <img src="img/icons/show-password.svg" alt="">
+              </button>
+            </div>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="'logged">
+            <h3>Keep me logged in</h3>
+          </label>
+          <button class="submit" type="button">Log In</button>
+        </form>
+        <div class="form-links">
+          <a href="javascript:void(0)">Forgot Username?</a>
+          <a href="javascript:void(0)">Forgot Password?</a>
+        </div>
+      </div>
+      <div class="item img">
+      </div>
+    </div>
+  </main>
+
+  <script src="./js/jquery-3.4.1.min.js"></script>
+
+  <script src="./js/script.min.js"></script>
+</body>
+
+</html>

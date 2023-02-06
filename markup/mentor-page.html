@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your DevOps Mentor</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="./css/mentor.min.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+  <div class="header-container">
+    <div class="header-wrapper">
+      <a class="logo" href="javascript:void(0)">
+        <img src="img/logo.svg" alt="">
+      </a>
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="javascript:void(0)">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              Blog
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              FAQ
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              Apply
+            </a>
+          </li>
+          <li id="menu-item-769">
+            <a href="javascript:void(0)">
+              <span>My Account</span>
+            </a>
+          </li>
+        </ul>
+        <div>
+          <ul class="mentee hover-menu" style="display: none">
+            <li><a href="javascript:void(0)">My subscriptions</a></li>
+            <li><a href="javascript:void(0)">Profile</a></li>
+            <li><a href="javascript:void(0)">Payment</a></li>
+            <li><a href="javascript:void(0)">Password</a></li>
+            <li><strong></strong></li>
+            <li><a href="javascript:void(0)">Log out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+  <!-- Content -->
+
+  <main class="main">
+
+    <div class="popup">
+      <div class="overlay"></div>
+      <div class="popup-content">
+        <h3 class="popup-heading">Сreate subscriptions for the user <span class="name">Maxim Maximov</span></h3>
+        <div class="content">
+          <div class="wrapper">
+            <h2>1.</h2>
+            <button class="delete">
+              <img src="./img/icons/trash.svg" alt="">
+              <span>Delete subscriptions</span>
+            </button>
+          </div>
+          <form action="">
+            <div class="inputs-wrapper">
+              <label class="name" for="">
+                <h3>Tariff Name</h3>
+                <div class="input-wrapper">
+                  <input type="text">
+                </div>
+              </label>
+              <label class="price" for="">
+                <h3>Price (month)</h3>
+                <div class="input-wrapper">
+                  <span>$</span>
+                  <input type="number" value="180">
+                </div>
+              </label>
+              <label for="">
+                <h3>Tariff Description</h3>
+                <textarea name="tariffDescription" id="" cols="30" rows="10"></textarea>
+              </label>
+            </div>
+            <button class="add" type="button"><strong>+</strong> <span>Аdd tariff</span></button>
+          </form>
+        </div>
+        <div class="popup-footer">
+          <a class="cancel" href="javascript:void(0)">Cancel</a>
+          <button type="button">Create a tariff</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <section class="tabs-buttons">
+        <a class="active" href="javascript:void(0)" data-tab="all-mentees"><span>Mentees</span></a>
+        <a href="javascript:void(0)" data-tab="tariffs"><span>Tariffs</span></a>
+        <a data-tab="profile" href="javascript:void(0)"><span>Profile</span></a>
+      </section>
+
+      <section class="tab all-mentees active">
+        <div class="mentees layout">
+          <div class="title-wrapper">
+            <h2>All Mentees</h2>
+            <div class="swiper-arrows">
+              <div class="swiper-button-prev">
+                <img src="./img/icons/slider-arrow-left.svg" alt="">
+              </div>
+              <div class="swiper-button-next">
+                <img src="./img/icons/slider-arrow-right.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="swiper mentees-slider all-mentees-slider">
+            <div class="slider-wrapper swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slider-item">
+                  <div class="mentee-profile">
+                    <div class="avatar-wrapper">
+                      <img class="img-avatar" src="img/icons/avatar-mentor.svg" alt="">
+                      <h3>Maksim Maksymov</h3>
+                    </div>
+                    <div class="description">
+                      <h3>Tariff</h3>
+                      <p>The user has not yet chosen the appropriate tariff for himself</p>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-item">
+                  <div class="mentee-profile">
+                    <div class="avatar-wrapper">
+                      <img class="img-avatar" src="img/icons/avatar-mentor.svg" alt="">
+                      <h3>Maksim Maksymov</h3>
+                    </div>
+                    <div class="description">
+                      <h3>Tariff <span>trial period</span></h3>
+                      <strong>Individual</strong>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-item">
+                  <div class="mentee-profile">
+                    <div class="avatar-wrapper">
+                      <img class="img-avatar" src="img/icons/avatar-mentor.svg" alt="">
+                      <h3>Maksim Maksymov</h3>
+                    </div>
+                    <div class="description">
+                      <h3>Tariff</h3>
+                      <p>The user has not yet chosen the appropriate tariff for himself</p>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-item">
+                  <div class="mentee-profile">
+                    <div class="avatar-wrapper">
+                      <img class="img-avatar" src="img/icons/avatar-mentor.svg" alt="">
+                      <h3>Maksim Maksymov</h3>
+                    </div>
+                    <div class="description">
+                      <h3>Tariff</h3>
+                      <p>The user has not yet chosen the appropriate tariff for himself</p>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-item">
+                  <div class="mentee-profile">
+                    <div class="avatar-wrapper">
+                      <img class="img-avatar" src="img/icons/avatar-mentor.svg" alt="">
+                      <h3>Maksim Maksymov</h3>
+                    </div>
+                    <div class="description">
+                      <h3>Tariff</h3>
+                      <p>The user has not yet chosen the appropriate tariff for himself</p>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-item">
+                  <div class="mentee-profile">
+                    <div class="avatar-wrapper">
+                      <img class="img-avatar" src="img/icons/avatar-mentor.svg" alt="">
+                      <h3>Maksim Maksymov</h3>
+                    </div>
+                    <div class="description">
+                      <h3>Tariff</h3>
+                      <p>The user has not yet chosen the appropriate tariff for himself</p>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-item">
+                  <div class="mentee-profile">
+                    <div class="avatar-wrapper">
+                      <img class="img-avatar" src="img/icons/avatar-mentor.svg" alt="">
+                      <h3>Maksim Maksymov</h3>
+                    </div>
+                    <div class="description">
+                      <h3>Tariff</h3>
+                      <p>The user has not yet chosen the appropriate tariff for himself</p>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-item">
+                  <div class="mentee-profile">
+                    <div class="avatar-wrapper">
+                      <img class="img-avatar" src="img/icons/avatar-mentor.svg" alt="">
+                      <h3>Maksim Maksymov</h3>
+                    </div>
+                    <div class="description">
+                      <h3>Tariff</h3>
+                      <p>The user has not yet chosen the appropriate tariff for himself</p>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-item">
+                  <div class="mentee-profile">
+                    <div class="avatar-wrapper">
+                      <img class="img-avatar" src="img/icons/avatar-mentor.svg" alt="">
+                      <h3>Maksim Maksymov</h3>
+                    </div>
+                    <div class="description">
+                      <h3>Tariff</h3>
+                      <p>The user has not yet chosen the appropriate tariff for himself</p>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)"></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-control">
+              <div class="swiper-pagination"></div>
+            </div>
+            <a href="javascript:void(0)" class="load-more">Load more</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab tariffs">
+        <div class="all-tariffs layout">
+          <div class="title-wrapper">
+            <h2>All Tariffs</h2>
+            <a class="btn" href="javascript:void(0)"><span>Сreate new tariff</span><img src="./img/icons/plus.svg" alt=""></a>
+            <div class="swiper-arrows">
+              <div class="swiper-button-prev">
+                <img src="./img/icons/slider-arrow-left.svg" alt="">
+              </div>
+              <div class="swiper-button-next">
+                <img src="./img/icons/slider-arrow-right.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="mentees-slider all-tariffs-slider">
+            <div class="slider-wrapper swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slider-item">
+                  <div class="tariff">
+                    <div class="title">
+                      <h3>Light</h3>
+                      <button>
+                        <img src="./img/icons/edit-mentor.svg" alt="">
+                      </button>
+                    </div>
+                    <div class="description">
+                      <ul>
+                        <li>Personalized goals</li>
+                        <li>Study recommendations</li>
+                      </ul>
+                    </div>
+                    <div class="price">
+                      <p><strong>$50</strong>/month</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-item">
+                  <div class="tariff">
+                    <div class="title">
+                      <h3>Light</h3>
+                      <button>
+                        <img src="./img/icons/edit-mentor.svg" alt="">
+                      </button>
+                    </div>
+                    <div class="description">
+                      <ul>
+                        <li>Dedicated</li>
+                        <li>Personalized goals</li>
+                        <li>Study recommendations</li>
+                        <li>Code reviews</li>
+                        <li>Individual chat support</li>
+                        <li>Individual sync-up calls</li>
+                        <li>Interview preparation</li>
+                        <li>Daily education sessions</li>
+                      </ul>
+                    </div>
+                    <div class="price">
+                      <p>$<strong>50</strong>/month</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-item">
+                  <div class="tariff">
+                    <div class="title">
+                      <h3>Light</h3>
+                      <button>
+                        <img src="./img/icons/edit-mentor.svg" alt="">
+                      </button>
+                    </div>
+                    <div class="description">
+                      <ul>
+                        <li>Personalized goals</li>
+                        <li>Study recommendations</li>
+                      </ul>
+                    </div>
+                    <div class="price">
+                      <p>$<strong>50</strong>/month</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-item">
+                  <div class="tariff">
+                    <div class="title">
+                      <h3>Light</h3>
+                      <button>
+                        <img src="./img/icons/edit-mentor.svg" alt="">
+                      </button>
+                    </div>
+                    <div class="description">
+                      <ul>
+                        <li>Personalized goals</li>
+                        <li>Study recommendations</li>
+                      </ul>
+                    </div>
+                    <div class="price">
+                      <p>$<strong>50</strong>/month</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-item">
+                  <div class="tariff">
+                    <div class="title">
+                      <h3>Light</h3>
+                      <button>
+                        <img src="./img/icons/edit-mentor.svg" alt="">
+                      </button>
+                    </div>
+                    <div class="description">
+                      <ul>
+                        <li>Personalized goals</li>
+                        <li>Study recommendations</li>
+                      </ul>
+                    </div>
+                    <div class="price">
+                      <p>$<strong>50</strong>/month</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-item">
+                  <div class="tariff">
+                    <div class="title">
+                      <h3>Light</h3>
+                      <button>
+                        <img src="./img/icons/edit-mentor.svg" alt="">
+                      </button>
+                    </div>
+                    <div class="description">
+                      <ul>
+                        <li>Personalized goals</li>
+                        <li>Study recommendations</li>
+                      </ul>
+                    </div>
+                    <div class="price">
+                      <p>$<strong>50</strong>/month</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-control">
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="edit-tariff layout">
+          <div class="title-wrapper">
+            <h2>Editing the tariff</h2>
+          </div>
+          <div class="content">
+            <form action="">
+              <div class="inputs-wrapper">
+                <label class="name" for="">
+                  <h3>Tariff Name</h3>
+                  <div class="input-wrapper">
+                    <input type="text">
+                  </div>
+                </label>
+                <label class="price" for="">
+                  <h3>Price (month)</h3>
+                  <div class="input-wrapper">
+                    <span>$</span>
+                    <input type="number" value="180">
+                  </div>
+                </label>
+                <label for="">
+                  <h3>Tariff Description</h3>
+                  <textarea name="tariffDescription" id="" cols="30" rows="10"></textarea>
+                </label>
+              </div>
+
+              <div class="btn-wrapper">
+                <a class="remove-btn" href="javascript:void(0)">Remove this tariff</a>
+                <div class="btns">
+                  <a class="cancel" href="javascript:void(0)">Cancel</a>
+                  <button type="button">Save changes</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="create-tariff layout">
+          <div class="title-wrapper">
+            <h2>Сreate new tariff </h2>
+          </div>
+          <div class="content">
+            <form action="">
+              <div class="inputs-wrapper">
+                <label class="name" for="">
+                  <h3>Tariff Name</h3>
+                  <div class="input-wrapper">
+                    <input type="text">
+                  </div>
+                </label>
+                <label class="price" for="">
+                  <h3>Price (month)</h3>
+                  <div class="input-wrapper">
+                    <span>$</span>
+                    <input type="number" value="180">
+                  </div>
+                </label>
+                <label for="">
+                  <h3>Tariff Description</h3>
+                  <textarea name="tariffDescription" id="" cols="30" rows="10"></textarea>
+                </label>
+              </div>
+
+              <div class="btn-wrapper">
+                <div class="btns">
+                  <a class="cancel" href="javascript:void(0)">Cancel</a>
+                  <button type="button">Сreate a tariff</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab profile">
+        <div class="form layout">
+          <div class="title-wrapper">
+            <h2>Manage your profile</h2>
+            <p>
+              A complete and updated profile gives potential mentors more information about yourself when you reach out
+              to them.
+            </p>
+          </div>
+          <form action="">
+            <div class="avatar">
+              <h3>Photo</h3>
+              <div class="avatar-wrapper">
+                <a class="delete-avatar">
+                  <img src="img/icons/cross.svg" alt="">
+                </a>
+                <img class="img-avatar" src="img/icons/avatar-mentor-profile.svg" alt="">
+                <label for="avatar" class="edit">
+                  <input type="file" style="visibility: hidden;" id="avatar">
+                </label>
+              </div>
+            </div>
+            <div class="form-wrapper">
+              <h3 class="form-heading">Personal date</h3>
+              <label for="firstName">
+                <div class="input-wrapper">
+                  <input type="text" placeholder="First name" id="firstName">
+                </div>
+              </label>
+              <label for="lastName">
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Last name" id="lastName">
+                </div>
+              </label>
+              <label for="email">
+                <div class="input-wrapper">
+                  <input type="email" placeholder="Email" id="email">
+                </div>
+              </label>
+              <button class="submit" type="button">Submit</button>
+              <a class="delete" href="javascript:void(0)">Delete account and all personal data</a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+  <div class="container">
+    <div class="footer-wrapper">
+      <a class="logo" href="javascript:void(0)">
+        <img src="img/logo.svg" alt="">
+      </a>
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="javascript:void(0)">
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <span>Blog</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <span>FAQ</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <span>Apply</span>
+            </a>
+          </li>
+        </ul>
+        <div class="terms-links">
+          <a href="javascript:void(0)">Privacy Policy</a>
+          <a href="javascript:void(0)">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./js/jquery.matchHeight.min.js"></script>
+  <script src="./js/script.min.js"></script>
+  <script src="./js/mentor.min.js"></script>
+</body>
+
+</html>

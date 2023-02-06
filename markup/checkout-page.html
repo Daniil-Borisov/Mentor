@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your DevOps Mentor</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="checkout.min.css">
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+  <div class="header-container">
+    <div class="header-wrapper">
+      <a class="logo" href="javascript:void(0)">
+        <img src="img/logo.svg" alt="">
+      </a>
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="javascript:void(0)">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              Blog
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              FAQ
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              Apply
+            </a>
+          </li>
+          <li id="menu-item-769">
+            <a href="javascript:void(0)">
+              <span>My Account</span>
+            </a>
+          </li>
+        </ul>
+        <div>
+          <ul class="mentee hover-menu" style="display: none">
+            <li><a href="javascript:void(0)">My subscriptions</a></li>
+            <li><a href="javascript:void(0)">Profile</a></li>
+            <li><a href="javascript:void(0)">Payment</a></li>
+            <li><a href="javascript:void(0)">Password</a></li>
+            <li><strong></strong></li>
+            <li><a href="javascript:void(0)">Log out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+  <!-- Content -->
+
+  <main class="main">
+    <!-- end popups -->
+
+    <form id="payment-form">
+      <div id="payment-element">
+        <!--Stripe.js injects the Payment Element-->
+      </div>
+      <button id="submit">
+        <div class="spinner hidden" id="spinner"></div>
+        <span id="button-text">Pay now</span>
+      </button>
+      <div id="payment-message" class="hidden"></div>
+    </form>
+  </main>
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <script src="./js/checkout.min.js" defer=""></script>
+  <script src="./js/script.min.js"></script>
+</body>
+
+</html>

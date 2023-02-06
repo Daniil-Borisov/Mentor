@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your DevOps Mentor</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="./css/mentee.min.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <include src="assets/templates/header.html"></include>
+  <!-- Content -->
+  <main class="signup">
+    <div class="content-items">
+      <div class="item form">
+        <div class="title-wrapper">
+          <h1>Sign Up Mentee</h1>
+          <p>Have an account?<a href="javascript:void(0)">Log In</a></p>
+        </div>
+        <div class="social-links">
+          <h3 class="social-title">You can Sign In with:</h3>
+          <div class="social">
+            <a href="javascript:void(0)">
+              <img src="img/icons/google.svg" alt="">
+              <p>Google</p>
+            </a>
+            <a href="javascript:void(0)">
+              <img src="img/icons/github.svg" alt="">
+              <p>GitHub</p>
+            </a>
+            <a href="javascript:void(0)">
+              <img src="img/icons/linkedin.svg" alt="">
+              <p>Linkedin</p>
+            </a>
+          </div>
+        </div>
+        <form action="">
+          <label for="firstName">
+            <h3>First Name</h3>
+            <div class="input-wrapper">
+              <input type="text" placeholder="Firs name" id="firstName">
+            </div>
+          </label>
+          <label for="lastName">
+            <h3>Last Name</h3>
+            <div class="input-wrapper">
+              <input type="text" placeholder="Last name" id="lastName">
+            </div>
+          </label>
+          <label for="email">
+            <h3>E-mail</h3>
+            <div class="input-wrapper">
+              <input type="email" placeholder="Email" id="email">
+            </div>
+          </label>
+          <label for="password">
+            <h3>Password</h3>
+            <div class="input-wrapper">
+              <input type="password" placeholder="Password" id="password">
+              <button type="button" class="show-password">
+                <img src="img/icons/show-password.svg" alt="">
+              </button>
+            </div>
+          </label>
+          <label for="passwordConfirmation">
+            <h3>Password confirmation</h3>
+            <div class="input-wrapper">
+              <input type="password" placeholder="Password" id="passwordConfirmation">
+              <button type="button" class="show-password">
+                <img src="img/icons/show-password.svg" alt="">
+              </button>
+            </div>
+          </label>
+          <div class="terms">
+            <p>By clicking "Sign Up" or "Login with Google/GitHub/Linkedin" you accept</p>
+            <p>the <a href="javascriot:void(0)">Terms of Service</a> and <a href="javascript:void(0)">Privacy Policy</a>.</p>
+          </div>
+          <button class="submit" type="button">Sign Up</button>
+        </form>
+        <p class="question">You are mentor<a href="javascript:void(0)">Click here</a></p>
+      </div>
+      <div class="item img">
+      </div>
+    </div>
+  </main>
+
+  <script src="./js/jquery-3.4.1.min.js"></script>
+
+  <script src="./js/script.min.js"></script>
+</body>
+
+</html>

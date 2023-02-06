@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your DevOps Mentor</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="./css/mentee.min.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <include src="assets/templates/header.html"></include>
+  <!-- Content -->
+
+  <main class="main">
+    <!-- popups -->
+
+    <div class="popup popup-delete">
+      <div class="overlay"></div>
+      <div class="popup-content">
+        <h3 class="popup-heading">Do you really want to delete your account?</h3>
+        <div class="content">
+          <p>If you delete your account - all information will be permanently deleted.</p>
+          <button class="cancel">Сancel</button>
+          <a class="continue" href="javascript:void(0)">Уes, I want to delete</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup popup-deleted">
+      <div class="overlay"></div>
+      <div class="popup-content">
+        <h3 class="popup-heading">Your account has been deleted!</h3>
+        <div class="content">
+          <a class="" href="javascript:void(0)">To Home Page</a>
+          <a class="" href="javascript:void(0)">Сreate a new account</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup popup-pause">
+      <div class="overlay"></div>
+      <div class="popup-content">
+        <h3 class="popup-heading">Pause</h3>
+        <div class="content">
+          <label for="date">
+            <h3>Change date</h3>
+            <div class="input-wrapper">
+              <input type="date" id="date">
+            </div>
+          </label>
+          <button class="submit" type="button"><span>Save</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup popup-successfully">
+      <div class="overlay"></div>
+      <div class="popup-content">
+        <h3 class="popup-heading">Successfully</h3>
+        <div class="content">
+          <button class="popup-button">Continue</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup popup-error">
+      <div class="overlay"></div>
+      <div class="popup-content">
+        <h3 class="popup-heading">Error</h3>
+        <div class="content">
+          <button class="popup-button">Continue</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- end popups -->
+
+    <div class="tabs">
+      <section class="tabs-buttons">
+        <a class="active" href="javascript:void(0)" data-tab="subscription"><span>My subscriptions</span></a>
+        <a href="javascript:void(0)" data-tab="profile"><span>Profile</span></a>
+        <a href="javascript:void(0)" data-tab="payment"><span>Payment</span></a>
+        <a href="javascript:void(0)" data-tab="password"><span>Password</span></a>
+      </section>
+      <section class="tab profile ">
+        <div class="form layout">
+          <div class="title-wrapper">
+            <h2>Manage your profile</h2>
+            <p>
+              A complete and updated profile gives potential mentors more information about yourself when you reach out
+              to them.
+            </p>
+          </div>
+          <form action="">
+            <div class="avatar">
+              <h3>Photo</h3>
+              <div class="avatar-wrapper">
+                <img class="img-avatar" src="img/icons/avatar-mentor-profile.svg" alt="">
+                <label for="avatar" class="edit">
+                  <input type="file" style="visibility: hidden;" id="avatar"></input>
+                </label>
+              </div>
+            </div>
+            <div class="form-wrapper">
+              <h3 class="form-heading">Personal date</h3>
+              <label for="firstName">
+                <div class="input-wrapper">
+                  <input type="text" placeholder="First name" id="firstName">
+                </div>
+              </label>
+              <label for="lastName">
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Last name" id="lastName">
+                </div>
+              </label>
+              <label for="email">
+                <div class="input-wrapper">
+                  <input type="email" placeholder="Email" id="email">
+                </div>
+              </label>
+              <h3 class="form-heading">Contacts</h3>
+              <label for="linkedin">
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Linkedin" id="linkedin">
+                </div>
+              </label>
+              <label for="job">
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Job" id="job">
+                </div>
+              </label>
+              <h3 class="form-heading">Your goal</h3>
+              <label for="myGoal">
+                <div class="input-wrapper">
+                  <textarea name="myGoal" id="myGoal" cols="30" rows="10"></textarea>
+                </div>
+              </label>
+              <p class="down-text">It's good practice to build mentorship around a long-term goal of yours. This is shared with mentors.</p>
+              <button class="submit" type="button">Submit</button>
+              <a class="delete" href="javascript:void(0)">Delete account and all personal data</a>
+            </div>
+          </form>
+        </div>
+        <div class="email-notification layout">
+          <h3 class="title">What notifications do you want to receive by email:</h3>
+          <form action="">
+            <label class="checkbox">
+              <input type="checkbox" id="'updates">
+              <h3>Important updates, mentor notifications, messages.</h3>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" id="'reminders">
+              <h3>Regular reminders that help you stay in touch.</h3>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" id="'payment">
+              <h3>Payment information.</h3>
+            </label>
+            <button class="submit" type="button">Submit</button>
+          </form>
+        </div>
+      </section>
+      <section class="tab password">
+        <div class="form layout password-layout">
+          <div class="title-wrapper">
+            <h2>Change your password</h2>
+          </div>
+          <form action="" class="password">
+            <div class="form-wrapper">
+              <label for="password">
+                <h3>Password</h3>
+                <div class="input-wrapper">
+                  <input type="password" placeholder="Password" id="password">
+                  <button type="button" class="show-password">
+                    <img src="img/icons/show-password.svg" alt="">
+                  </button>
+                </div>
+              </label>
+              <label for="passwordConfirmation">
+                <h3>Password confirmation</h3>
+                <div class="input-wrapper">
+                  <input type="password" placeholder="Password" id="passwordConfirmation">
+                  <button type="button" class="show-password">
+                    <img src="img/icons/show-password.svg" alt="">
+                  </button>
+                </div>
+              </label>
+              <button class="submit" type="button">Save changes</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="tab subscription active">
+        <div class="available layout">
+          <div class="title-wrapper">
+            <h2>Available Plans</h2>
+            <div class="swiper-arrows">
+              <div class="swiper-button-prev">
+               <img src="/img/icons/slider-arrow-left.svg" alt="arrow left">
+              </div>
+              <div class="swiper-button-next">
+               <img src="/img/icons/slider-arrow-right.svg" alt="arrow right">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slider-item">
+                  <div class="title-with-price">
+                    <h3>Group</h3>
+                    <p class="desktop-price"><strong>$350</strong>/month</p>
+                  </div>
+                  <ul>
+                    <li>Personalized goals</li>
+                    <li>Study recommendations</li>
+                    <li>Code reviews</li>
+                    <li>Group chat support</li>
+                    <li>Personalized goals</li>
+                  </ul>
+                  <a href="javascript:void(0)" class="subscribe">Subscribe</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-item">
+                  <div class="title-with-price">
+                    <h3>Group</h3>
+                    <p class="desktop-price"><strong>$350</strong>/month</p>
+                  </div>
+                  <p>Personalized goals</p>
+                  <p>Study recommendations</p>
+                  <p>Code reviews</p>
+                  <p>Group chat support</p>
+                  <p>Personalized goals</p>
+                  <a href="javascript:void(0)" class="subscribe">Subscribe</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-item">
+                  <div class="title-with-price">
+                    <h3>Group</h3>
+                    <p class="desktop-price"><strong>$350</strong>/month</p>
+                  </div>
+                  <ul>
+                    <li>Personalized goals</li>
+                    <li>Study recommendations</li>
+                    <li>Code reviews</li>
+                    <li>Group chat support</li>
+                    <li>Personalized goals</li>
+                  </ul>
+                  <a href="javascript:void(0)" class="subscribe">Subscribe</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="current-plan layout">
+          <div class="title-wrapper">
+            <h2>My Current Plan</h2>
+          </div>
+          <div class="plan">
+            <div class="plan-wrapper">
+              <h3>Individual</h3>
+              <ul>
+                <li>Personalized goals</li>
+                <li>Study recommendations</li>
+                <li>Code reviews</li>
+                <li>Individual chat support</li>
+                <li>Individual sync-up calls</li>
+                <li>Interview preparation</li>
+              </ul>
+            </div>
+            <div class="price-wrapper">
+              <div class="price">
+                <p class="old-price"><span>$340</span>/month</p>
+                <p class="actual-price"><strong>$300</strong>/month</p>
+              </div>
+              <div class="price-btns">
+                <a class="pause" href="javascript:void(0)">
+                  <span>Pause</span>
+                  <img src="./img/icons/pause_icon.svg" alt="">
+                </a>
+                <a class="start" href="javascript:void(0)" style="display: none;">
+                  <span>Start</span>
+                  <img src="./img/icons/icon-start.svg" alt="">
+                </a>
+                <a class="cancel" href="javascript:void(0)">Cancel</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="toolbox layout">
+          <div class="title-wrapper">
+            <h2>My Toolbox</h2>
+          </div>
+          <div class="toolbox-items swiper-slider">
+            <!-- <div class="swiper-arrows">
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div> -->
+           <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="item">
+                <div class="img">
+                  <img src="./img/icons/trello.svg" alt="">
+                </div>
+                <h3>Trello <span>board</span></h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="item slack">
+                <div class="img">
+                  <img src="./img/icons/slack.svg" alt="">
+                </div>
+                <h3>Slack <span>worksapce</span></h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="item">
+                <div class="img">
+                  <img src="./img/icons/mentor.svg" alt="">
+                </div>
+                <h3>Your <span>mentor</span></h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="item">
+                <div class="img">
+                  <img src="./img/icons/book.svg" alt="">
+                </div>
+                <h3>Book <span>a session</span></h3>
+              </div>
+            </div>
+           </div>
+           <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="blog layout">
+          <div class="title-wrapper">
+            <h2>Latest from our blog</h2>
+            <div class="swiper-arrows">
+              <div class="swiper-button-prev">
+               <img src="/img/icons/slider-arrow-left.svg" alt="arrow left">
+              </div>
+              <div class="swiper-button-next">
+               <img src="/img/icons/slider-arrow-right.svg" alt="arrow right">
+              </div>
+            </div>
+          </div>
+          <div class="blog-items swiper-slider">
+           <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="item">
+                <img src="./img/blog-img1.png" alt="">
+                <div class="description">
+                  <h3>Launch Your First Jenkins Server in a Single Comma</h3>
+                  <p>Jenkins is one of the oldest and most popular CI/CD tools. It dominates the market and is a requirement...</p>
+                  <a href="javascript:void(0)">Read all</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="item">
+                <img src="./img/blog-img2.png" alt="">
+                <div class="description">
+                  <h3>Free Books that will Boost Your DevOps Game to the</h3>
+                  <p>Jenkins is one of the oldest and most popular CI/CD tools. It dominates the market and is a requirement...</p>
+                  <a href="javascript:void(0)">Read all</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="item">
+                <img src="./img/blog-img3.png" alt="">
+                <div class="description">
+                  <h3>Launch Your First Jenkins Server in a Single Comma</h3>
+                  <p>Jenkins is one of the oldest and most popular CI/CD tools. It dominates the market and is a requirement It dominates the market and is a requirement Jenkins is one of the oldest and most popular CI/CD tools. It dominates the market and is a requirement It dominates the market and is a requirement Jenkins is one of the oldest and most popular CI/CD tools. It dominates the market and is a requirement It dominates the market and is a requirement Jenkins is one of the oldest and most popular CI/CD tools. It dominates the market and is a requirement It dominates the market and is a requirement...</p>
+                  <a href="javascript:void(0)">Read all</a>
+                </div>
+              </div>
+            </div>
+           </div>
+           <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <section class="tab payment ">
+        <div class="payment-wrapper layout">
+          <div class="form">
+            <div class="title-wrapper">
+              <h2>Payment details:</h2>
+              <p>Please enter the details of the card from which the payment for your subscription will be deducted</p>
+            </div>
+            <form class="formPayment">
+              <div class="card-number" style="display: none;">
+                <span>1234 1234 1234 1234</span>
+              </div>
+              <div class="card-holder" style="display: none;">
+                <em>Card holder</em>
+                <span>Your Name</span>
+              </div>
+              <div class="form-content">
+                <div class="field">
+                  <label for="cardnumber">Card number</label>
+                  <div class="input-wrapper">
+                    <input type="tel" id="cardnumber" maxlength="20" />
+                  </div>
+                  <span class="focus-bar"></span>
+                </div>
+                <div class="field">
+                  <label for="cardholder">Cardholder Name</label>
+                  <div class="input-wrapper">
+                    <input type="text" autocorrect="off" spellcheck="false" id="cardholder" maxlength="40" />
+                  </div>
+                  <span class="focus-bar"></span>
+                </div>
+                <div class="field-group">
+                  <div class="col-50">
+                    <label for="expires-month">Сard Expiry Date</label>
+                    <div class="field expire-date">
+                      <div class="expire-date-wrapper">
+                        <div class="input-wrapper">
+                          <input type="tel" id="expires-month" placeholder="MM" allowed-pattern="[0-9]" maxlength="2">
+                        </div>
+                        <span class="focus-bar"></span>
+                      </div>
+                      <div class="divider">/</div>
+                      <div class="expire-date-wrapper">
+                        <div class="input-wrapper">
+                          <input type="tel" id="expires-year" placeholder="YY" allowed-pattern="[0-9]" maxlength="2">
+                        </div>
+                        <span class="focus-bar"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-50">
+                    <div class="field ccv">
+                      <label for="ccv">СVV/CVC code</label>
+                      <div class="input-wrapper">
+                        <input type="tel" id="ccv" autocomplete="off" maxlength="3" />
+                      </div>
+                      <span class="focus-bar"></span>
+                    </div>
+                  </div>
+                </div>
+                <button type="button"><span>Add card</span></button>
+              </div>
+            </form>
+            <div class="existing-card">
+              <h3>**** **** **** 0001</h3>
+              <div class="description">
+                <span>Subscription payment is made from this card.</span>
+                <a href="javascript:void(0)">Delete this card</a>
+              </div>
+            </div>
+            <div class="promo">
+              <div class="title-wrapper">
+                <h2>I have a promo code! </h2>
+                <p>If you have a promo code, please enter it in the field below, click APPLY and the monthly payment amount will be updated</p>
+                <p class="bold">Please note: the promo code is one-time only</p>
+              </div>
+              <div class="input promocode">
+                <div class="input-wrapper">
+                  <input type="text" value="promo13">
+                  <button>Аpply</button>
+                  <span class="validation">Promo code applied successfully!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="payment-plan">
+            <div class="title-plan">
+              <h3>Your subscription:</h3>
+              <h4>Individual</h4>
+            </div>
+            <div class="plan-price">
+              <div class="plan-price-wrapper">
+                <span>Price without discount</span>
+                <span>$<strong>40</strong>/month</span>
+              </div>
+              <div class="plan-price-wrapper">
+                <span>Sale</span>
+                <span>$<strong>340</strong>/month</span>
+              </div>
+            </div>
+            <div class="total-price">
+              <span>Discounted price</span>
+              <span class="total">$<strong>300</strong>/month</span>
+            </div>
+            <div class="period">
+              <h4>You have paid for the period:</h4>
+              <div class="period-wrapper">
+                <span>from</span>
+                <strong>15 May 2022</strong>
+              </div>
+              <div class="period-wrapper">
+                <span>to</span>
+                <strong>15 August 2022</strong>
+              </div>
+            </div>
+            <div class="trial">
+              <!-- Trial -->
+              <p>You have <strong>8</strong> free days of subscription!</p>
+              <p class="description">If there are free days of subscription - the date of your paid period is shifted</p>
+            </div>
+            <div class="trial" style="display: none;">
+              <!-- Non trial -->
+              <p>You don't have free days of subscription.</p>
+            </div>
+            <a href="javascript:void(0)" class="payBtn">Pay now</a>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script src="./js/script.min.js"></script>
+  <script src="./js/mentee.min.js"></script>
+</body>
+
+</html>
